@@ -1,5 +1,5 @@
 # algorithms
-implementations of standard data types and algorithms in Ruby and C
+implementations of standard data types and algorithms in Ruby, JavaScript, and C
 
 ## Dynamic Array
 implements a dynamic array class on top a simulated static "C" array class as a linear array with O(n) shift/unshift and as a ring buffer with amortized O(1) shift/unshift.
@@ -12,4 +12,4 @@ doubly-linked list also in C.
 out-of-place and in-place implementations of Quicksort with random pivot
 
 ## JavaScript Algorithms
-JavaScript implememtations of Mergesort, Bubblesort, Quicksort, and Binary Search
+JavaScript implementations of Mergesort, Bubblesort, Quicksort, and Binary Search
