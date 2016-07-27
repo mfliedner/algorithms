@@ -7,3 +7,9 @@ implements a dynamic array class on top a simulated static "C" array class as a 
 ## HashMap, Linked List, and LRU cache
 building up data structures from simpler one in stages using simple hashing functions in Ruby,
 doubly-linked list also in C.
+
+## Quicksort
+out-of-place and in-place implementations of Quicksort with random pivot
+
+## JavaScript Algorithms
+JavaScript implememtations of Mergesort, Bubblesort, Quicksort, and Binary Search
