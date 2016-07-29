@@ -13,3 +13,6 @@ out-of-place and in-place implementations of Quicksort with random pivot
 
 ## JavaScript Algorithms
 JavaScript implementations of Mergesort, Bubblesort, Quicksort, and Binary Search
+
+## Binary Search Tree
+a simple Ruby implementation of a binary search tree using Hibbard deletion
