@@ -16,3 +16,6 @@ JavaScript implementations of Mergesort, Bubblesort, Quicksort, and Binary Searc
 
 ## Binary Search Tree
 a simple Ruby implementation of a binary search tree using Hibbard deletion
+
+## Topological Sort
+Adjacency List representation of a graph and Kahn's and Tarjan's topological sorting algorithms
