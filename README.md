@@ -19,3 +19,6 @@ a simple Ruby implementation of a binary search tree using Hibbard deletion
 
 ## Topological Sort
 Adjacency List representation of a graph and Kahn's and Tarjan's topological sorting algorithms
+
+## Heap
+two implementations of a Binary Min Heap (with and without index map), Heapsort, and Priority Map
