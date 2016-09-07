@@ -1,9 +1,9 @@
 class DPProblems
   def initialize
     # cache instance variables for each problem
-
-    # first two members of Fibonacci series
-    @fibonacci_cache = {1 => 1, 2 => 1}
+    @fibonacci_cache = {1 => 1, 2 => 1} # first two members of Fibonacci series
+    @coin_cache = {0 => 0} # base case: change for 0
+    @knapsack_cache = [] # empty table
   end
 
   # Takes in a positive integer n and returns the nth Fibonacci number
@@ -46,5 +46,34 @@ class DPProblems
     else
       @coin_cache[amt] = nil
     end
+  end
+
+  # Knapsack Problem: takes in an array of weights, an array of values, and a weight capacity
+  # and returns the maximum value possible given the weight constraint.
+  # Each item can only be included once.
+  # Iterative, top-down solution
+  def knapsack(weights, values, capacity)
+    return 0 if capacity == 0 || weights.length == 0
+
+    # build cache table for all capacities and item weights with maximum value
+    # using only first i items and weight constraint j
+    (0..capacity).each do |i|
+      @knapsack_cache[i] = []
+      (0...weights.length).each do |j|
+        if i == 0
+          @knapsack_cache[i][j] = 0
+        elsif j == 0
+          @knapsack_cache[i][j] = weights[0] > i ? 0 : values[0]
+        else
+          # add item i if possible
+          case1 = i < weights[j] ? 0 : @knapsack_cache[i - weights[j]][j - 1] + values[j]
+          # do not add item i
+          case2 = @knapsack_cache[i][j - 1]
+          @knapsack_cache[i][j] = [case1, case2].max
+        end
+      end
+    end
+
+    @knapsack_cache[capacity][weights.length - 1]
   end
 end
