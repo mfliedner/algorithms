@@ -76,4 +76,29 @@ class DPProblems
 
     @knapsack_cache[capacity][weights.length - 1]
   end
+
+    # Stair Climber: a frog climbs a set of stairs.  It can jump 1 step, 2 steps, or 3 steps at a time.
+    # stair_climb returns all the possible ways the frog can get from the bottom step to step n.
+    # Iterative solution similar to the knapsack problem: building up a table of solutions from 0 to n
+    def stair_climb(n)
+      step_table = [[[]], [[1]], [[1, 1], [2]]] # initialize for cases 0 to 2 to make look back loop valid
+
+      return step_table[n] if n < 3
+
+      (3..n).each do |i| # generate table entry for step number i
+        steps = []
+        (1..3).each do |j|
+          step_table[i - j].each do |way| # look back by leap size j
+            next_step = [j]
+            way.each do |k| # add leap j to each possible previous solution
+              next_step << k
+            end
+            steps << next_step # accumulate solutions for step number i
+          end
+        end
+        step_table << steps
+      end
+
+      step_table.last # solution is the last table entry: step number n
+    end
 end
