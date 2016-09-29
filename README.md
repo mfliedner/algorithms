@@ -18,11 +18,11 @@ JavaScript implementations of Mergesort, Bubblesort, Quicksort, and Binary Searc
 a simple Ruby implementation of a binary search tree using Hibbard deletion
 
 ## Heap
-first implementation of a Binary Min Heap (without index map) and Heapsort
+implementation of a Binary Min Heap (without index map) and Heapsort
 
 ## Graphs
 Adjacency List representation of a graph and Kahn's and Tarjan's topological sorting algorithms;
-second implementation of a Binary Min Heap (with index map), Priority Map, Dijkstra shortest path
+implementation of a Binary Min Heap (with index map), Priority Map, Dijkstra shortest path
 
 ## Dynamic Programming
 simple example problems for dynamic programming (recursion with caching of past results)
